@@ -1,17 +1,101 @@
-* {
-    box-sizing: border-box;
+*{
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Bangers'; font-size: 20px;
+    text-align: center;
+    text-shadow: 2px 2px 5px red;
+}
+
+.wrapper {
+    width: 1170px;
+    margin: 0 auto;
 }
 
 header {
-    background-color: gray;
-    padding: 30px;
-    text-align: center;
+    height: 100px;
+    background: black;
+    width: 100%;
+    z-index: 12;
+    position: fixed;
+}
+
+.logo {
+    width: 30%;
+    float: left;
+    line-height: 100px;
+}
+
+.logo a {
+    text-decoration: none;
     font-size: 30px;
+    font-family: bangers;
     color: white;
+    letter-spacing: 5px;
+}
+
+nav {
+    float: right;
+    line-height: 100px;
+}
+
+nav a {
+    text-decoration: none;
+    font-family: bangers;
+    letter-spacing: 4px;
+    font-size: 20px;
+    margin: 0 10px;
+    color: white;
+}
+
+.banner-area {
+    width: 100%;
+    height: 640px;
+    position: fixed;
+    top: 100px;
+    background-image: url(https://staticg.sportskeeda.com/editor/2023/03/b9220-16788305879337-1920.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+}
+
+.banner-area h2 {
+    padding-top: 8%;
+    font-size: 70px;
+    font-family: Bangers;
+    text-transform: uppercase;
+    color:beige;
+}
+
+.content-area {
+    width: 100%;
+    position: relative;
+    top: 600px;
+    background: black;
+    height: 1500px;
+    color: white;
+}
+
+.content-area h2 {
+    font-family: bangers;
+    letter-spacing: 4px;
+    padding-top: 30px;
+    font-size: 40px;
+    margin: 0;
+}
+
+.content-area p {
+    padding: 2% 0;
+    font-family: bangers;
+    line-height: 30px;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 
 nav ul {
@@ -21,29 +105,10 @@ nav ul {
 
 article {
     text-align: center;
-    padding: 20px;
-    background-color: rgb(51, 2, 2);
-    height: 250px;
 }
 
 section::after {
     content: "";
     display: table;
     clear: both;
-}
-
-footer {
-    background-color: darkgrey;
-    padding: 10px;
-    text-align: center;
-    color: black;
-}
-
-@media (max-width: 600px) {
-
-    nav,
-    article {
-        width: 100%;
-        height: auto;
-    }
 }
