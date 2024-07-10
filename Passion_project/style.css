@@ -74,7 +74,7 @@ nav a {
     position: relative;
     top: 600px;
     background: black;
-    height: 1500px;
+    height: 100%;
     color: white;
 }
 
@@ -114,18 +114,11 @@ section::after {
     clear: both;
 }
 
-footer {
-    padding: 5px;
-    text-align: center;
-    background: darkred;
-    color: white;
-}
-
 header h1 {
     font-size: 40px;
 }
 
-.material-symbols-outlined {
+.material-symbols-rounded {
   font-variation-settings:
   'FILL' 0,
   'wght' 400,
@@ -138,6 +131,95 @@ header h1 {
     color: aliceblue;
 }
 
+.player-wrapper {
+    width: 776px;
+    height: 437px;
+    margin-top: 30px;
+    margin-left: 40px;
+    color: white;
+}
+
+.player-wrapper.full-screen {
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    margin-left: 0;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: black;
+}
+
+.video-controller {
+    width: 100%;
+    height: 70px;
+    position: relative;
+    top: -70px;
+    opacity: 0;
+}
+
+.player-wrapper:hover .video-controller {
+    opacity: 1;
+    transition: opacity 3s;
+}
+
+.controller-container {
+    height: inherit;
+}
+
+.video-holder {
+    width: inherit;
+    height: inherit;
+    background: black;
+}
+
+video {
+    width: auto;
+    height: inherit;
+}
+
+.auto-play-bar {
+    width: 50px;
+    height: 15px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.515);
+}
+
+.auto-play-switcher {
+    font-size: 20px;
+    padding: 1px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.447);
+    color: black;
+}
+
+.play-bar {
+    width: 100%;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.537);
+    cursor: pointer;
+}
+
+.running {
+    width: 0%;
+    height: inherit;
+    background: red;
+} 
+
+.player-option-wrapper {
+    position: relative;
+    height: 110px;
+    top: -200px;
+    left: -160px;
+    width: 250px;
+    background: rgba(255, 255, 255, 0.86);
+    padding: 7px;
+    border-radius: 10px;
+}
 .flex {
     display: flex;
 
@@ -183,4 +265,11 @@ header h1 {
 
 .greyed-out {
     color: gray;
+}
+
+footer {
+    padding: 5px;
+    text-align: center;
+    background: rgba(11, 11, 11, 0.551);
+    color: white;
 }

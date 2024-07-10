@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+</head>
+<header>
+    <h1>YouTube Video Player</h1>
+    <nav><a href="index.html">Home</a>
+    </nav>
+</header>
+
+<section class="player-wrapper">
+    <section class="video-holder flex flex-center">
+        <video src=""></video>
+    </section>
+
+    <section class="video-controller">
+        <div class="controller-container flex flex-col justify-ard">
+            <div class="play-bar">
+                <div class="running"></div>
+            </div>
+            <section class="flex items-center justify-btw">
+                <section class="state-control flex items-center">
+                    <span class="material-symbols-rounded icon me-10 play" title="Play">play_arrow</span>
+                    <span class="material-symbols-rounded icon me-10 pause hidden" title="Pause">pause</span>
+                    <span class="material-symbols-rounded icon me-10 play-next" title="Play Next Video"
+                        onclick="handleNext(this)">skip_next</span>
+                    <div class="sound flex items-center">
+                        <span class="material-symbols-rounded icon mute" title="Mute"
+                            onclick="handleMute('m')">volume_up</span>
+                        <span class="material-symbols-rounded icon unmute hidden" title="Unmute"
+                            onclick="handleMute('um')">volume_off</span>
+                        <span class="flex items-center volume-container">
+                            <input type="range" min="0" max="1" step="0.05" value="1" class="sound-volume"
+                                title="Volume">
+                        </span>
+                    </div>
+                    <span class="time-stamp ms-10 items-center">
+                        <span class="current-time">00:00</span>
+                        <span class="separator"> / </span>
+                        <span class="total-time">00:00</span>
+                    </span>
+                </section>
+
+                <section class="play-options flex items-center">
+                    <div class="auto-play auto-play-bar flex items-center justify-end me-10" title="Autoplay"
+                        onclick="handleAutoplay(this)">
+                        <div class="material-symbols-rounded icon auto-play-switcher">play_arrow</div>
+                    </div>
+
+                    <span class="material-symbols-rounded icon me-10 grayed-out" onclick="handleSubtitle(this)"
+                        title="Subtitle">closed_caption</span>
+
+                    <div class="icon-size me-10">
+                        <span class="material-symbols-rounded icon" title="Settings"
+                            onclick="document.querySelector('.player-options-wrapper').classList.toggle('hidden')">settings</span>
+                        <section class="player-options-wrapper hidden">
+                            <div>
+                                <div class="flex items-center justify-btw" title="Play Speed">
+                                    <div class="flex items-center">
+                                        <span class="material-symbols-rounded icon">slow_motion_video</span>
+                                        <span class="ms-10">Play Speed</span>
+                                    </div>
+                                    <div>
+                                        <select name="play-speed" id="play-speed" onchange="handlePlaySpeed(this)">
+                                            <option value="0.25">0.25</option>
+                                            <option value="0.5">0.5</option>
+                                            <option value="0.75">0.75</option>
+                                            <option value="1" selected>Normal</option>
+                                            <option value="1.25">1.25</option>
+                                            <option value="1.5">1.5</option>
+                                            <option value="1.75">1.75</option>
+                                            <option value="2">2</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center justify-btw mt-10" title="Quality">
+                                    <div class="flex items-center">
+                                        <span class="material-symbols-rounded icon">tune</span>
+                                        <span class="ms-10">Quality</span>
+                                    </div>
+                                    <div>
+                                        <select name="quality" id="quality">
+                                            <option value="1080">1080p <sup>HD</sup></option>
+                                            <option value="720">720p</option>
+                                            <option value="480">480p</option>
+                                            <option value="360">360p</option>
+                                            <option value="240">240p</option>
+                                            <option value="auto" selected>Auto(480p)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <span class="material-symbols-rounded icon me-10" title="Miniplayer"
+                        onclick="handlePictureInPicuture()">branding_watermark</span>
+                    <span class="material-symbols-rounded icon me-10" title="Theater mode">crop_3_2</span>
+                    <span class="material-symbols-rounded icon me-10 fullscreen" title="Full Screen"
+                        onclick="handleFullScreen(this)">fullscreen</span>
+                    <span class="material-symbols-rounded icon me-10 fullscreen_exit hidden" title="Exit Full Screen"
+                        onclick="handleFullScreen()">fullscreen_exit</span>
+                </section>
+            </section>
+        </div>
+    </section>
+    <section class="Subtitle-wrapper hidden">
+        <section>
+            <div>This is an example subtitle</div>
+        </section>
+    </section>
+</section>
+
+<section class="video-title">
+    <h3 class="title">Video Title</h3>
+</section>
+<script src="app.js"></script>
+<body>
+</body>
+</html>
