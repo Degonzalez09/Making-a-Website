@@ -91,6 +91,7 @@ nav a {
     font-family: bangers;
     line-height: 30px;
 }
+
 .center {
     display: block;
     margin-left: auto;
@@ -111,4 +112,75 @@ section::after {
     content: "";
     display: table;
     clear: both;
+}
+
+footer {
+    padding: 5px;
+    text-align: center;
+    background: darkred;
+    color: white;
+}
+
+header h1 {
+    font-size: 40px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.icon {
+    font-size: 30px;
+    color: aliceblue;
+}
+
+.flex {
+    display: flex;
+
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.justify-btw {
+    justify-content: space-between;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.justify-start {
+    justify-content: flex-start;
+}
+
+.hidden {
+    display: none;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.ms-10 {
+    margin-left: 10px;
+}
+
+.me-10 {
+    margin-right: 10px;
+}
+
+.greyed-out {
+    color: gray;
 }

@@ -7,6 +7,7 @@
     <title>My Love For </title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
    <div class="box-area">
@@ -38,12 +39,7 @@
                         </section>
                     </section>
 
-                    <section class="video-controller">
-                        <div class="controller-container flex flex-col justify-ard">
-                            <div class="play-bar"></div>
-                                <div class="running"></div>
-                        </div>
-                    </section>
+                   
         <section>
             <nav>
                 <ul>
@@ -63,7 +59,86 @@
             </article>
         </section>      
     </div>
-<footer>
+<footer> <section class="video-controller">
+    <div class="controller-container flex flex-col justify-ard">
+        <div class="play-bar"></div>
+            <div class="running"></div>
+    </div>
+    <section class="flex items-center justity-btw">
+        <section class="state-control flex-item center">
+            <span class="material-symbols-outlined icon me-10 play" title="Play">_circle</span>
+            <span class="material-symbols-outlined icon me-10 pause" title="Pause">play_circle</span>
+            <span class="material-symbols-outlined icon me-10 play-next" title="Play Next Video">skip_next</span>
+            <div class="sound flex items-center">
+                <span class="material-symbols-outlined icon me-10 mute" title="Mute">volume_up</span>
+                <span class="material-symbols-outlined icon me-10 ummute" title="Unmute">volume_off</span>
+                <span class="flex items-center volume-container">
+                    <input type="range" min="0" max="1" step="0.05" value="1" class="sound-volume" title="Volume">
+                </span>
+            </div>
+            <span class="time-stamp">
+                <span class="current-time">00:00</span>
+                <span class="separator">/</span>
+                <span class="total-time">00:00</span>
+            </span>
+        </section>
+
+        <section class="play-options flex items-center">
+            <div class="auto-play auto-play-bar flex items-center justify-end me-10" title="Autoplay">
+                <div class="material-symbols-outlined icon auto-play-switcher">play-circle</div>
+            </div>
+
+            <span class="material-symbols-outlined icon me-10 grayed-out" title="Subtitle">closed_captions</span>
+
+            <div class="icon-size me-10">
+                <span class="material-symbols-outlined icon me-10" title="Settings">Settings</span>
+                <section class="player-options-wrapper">
+                    <div>
+                        <div class="flex items-center justity-btw">
+                            <div class="flex items-center">
+                                <span class="material-symbols-outlined icon" title="">slow_motion_video</span>
+                                <span class="ms-10">Play Speed</span>
+                            </div>
+                            <div>
+                                <select name="play-speed" id="play-speed">
+                                    <option value="0.25">0.25</option>
+                                    <option value="0.5">0.5</option>
+                                    <option value="0.75">0.75</option>
+                                    <option value="1"selected>Normal</option>
+                                    <option value="1.25">1.25</option>
+                                    <option value="1.5">1.5</option>
+                                    <option value="1.75">1.75</option>
+                                    <option value="2">2</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justity-btw mt=10">
+                            <div class="flex items-center">
+                                <span class="material-symbols-outlined icon" title="">tune</span>
+                                <span class="ms=10">Quality</span>
+                        </div>
+                        <div>
+                            <select name="quality" id="quality">
+                                <option value="1080">1080p <sup>HD</sup></option>
+                                <option value="720">720p</option>
+                                <option value="480">480p</option>
+                                <option value="360">360p</option>
+                                <option value="240">240p</option>
+                                <option value="auto" selected>Auto(480p)</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </section>
+
+
+            </div>
+        </section>
+        
+    </section>
+</section>
+
     <p>I love Anime</p>
 </footer>
 </body>
